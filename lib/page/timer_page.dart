@@ -16,7 +16,7 @@ class _TimerPageState extends State<TimerPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff957fef),
+      backgroundColor: const Color(0xff1F1023),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(12),
@@ -47,7 +47,7 @@ class _TimerPageState extends State<TimerPage> {
                   Expanded(
                     child: RawMaterialButton(
                       onPressed: (() {}),
-                      fillColor: const Color(0xff7161EF),
+                      fillColor: const Color(0xffFEA82F),
                       shape: const RoundedRectangleBorder(),
                       child: const Text(
                         'WORK',
@@ -63,7 +63,7 @@ class _TimerPageState extends State<TimerPage> {
                   Expanded(
                     child: RawMaterialButton(
                       onPressed: (() {}),
-                      fillColor: const Color(0xff7161EF),
+                      fillColor: const Color(0xffFEA82F),
                       shape: const RoundedRectangleBorder(),
                       child: const Text(
                         'STOP',
