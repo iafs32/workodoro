@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:workodoro/widget/gradient_widget.dart';
 
 class CountdownPage extends StatefulWidget {
   const CountdownPage({super.key});
