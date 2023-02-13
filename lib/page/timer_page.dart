@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:workmanager/workmanager.dart';
 
 class TimerPage extends StatefulWidget {
   const TimerPage({super.key});
@@ -95,7 +96,13 @@ class _TimerPageState extends State<TimerPage> {
                 children: [
                   Expanded(
                     child: RawMaterialButton(
-                      onPressed: (() {
+                      onPressed: (() async {
+                        await Workmanager().registerPeriodicTask(
+                          duration.inSeconds.toString(),
+                          "Timer",
+                          frequency: const Duration(seconds: 15),
+                        );
+
                         startTimer();
                         if (isStarted) {
                           changeTimer();

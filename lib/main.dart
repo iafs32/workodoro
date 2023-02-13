@@ -1,7 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:workodoro/page/timer_page.dart';
+import 'package:workmanager/workmanager.dart';
 
-void main() {
+sendData() {
+  print('Hiiii');
+}
+
+const taskName = 'firsttask';
+
+void callbackDispatcher() {
+  Workmanager().executeTask((taskName, inputData) {
+    switch (taskName) {
+      case 'firsttask':
+        sendData();
+        break;
+      default:
+    }
+    return Future.value(true);
+  });
+}
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Workmanager().initialize(callbackDispatcher, isInDebugMode: false);
   runApp(const MyApp());
 }
 
