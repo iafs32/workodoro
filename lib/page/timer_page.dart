@@ -30,7 +30,7 @@ class _TimerPageState extends State<TimerPage> {
   void changeTimer() {
     isCountdown = !isCountdown;
     if (isCountdown) {
-      duration = Duration(seconds: (duration.inSeconds ~/ 300) + 5);
+      duration = Duration(seconds: (3 * duration.inSeconds) ~/ 10);
     } else {
       duration = const Duration();
     }
